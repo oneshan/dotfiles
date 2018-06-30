@@ -1,0 +1,25 @@
+# Improve bash
+alias ll='ls -FGlAhp'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias mkdir='mkdir -pv'
+alias less='less -FSRXc'
+alias ht='history|tail'
+alias pwc='pwd | pbcopy'   # copy current directory to clipboard
+
+# Always enable colored `grep` output
+alias grep='grep --color=auto '
+
+# Git
+alias gs='git status'
+alias ga='git add'
+alias gcm='git commit -m'
+
+# Internet
+alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias lanip="ifconfig | grep 'inet' | grep -v 127.0.0.1"
+alias sniff='nettop -m route'
+
+# Quicklook preview files from the command line
+alias ql="qlmanage -p &>/dev/null"

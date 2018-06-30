@@ -1,0 +1,76 @@
+# Set global configuration arguments
+cask_args appdir: "/Applications"
+
+tap "homebrew/core"
+tap "homebrew/cask"
+tap "homebrew/bundle"
+
+###############################################################################
+# CLI tools                                                                   #
+###############################################################################
+
+# Cask dependencies
+brew "mas"
+
+brew "cmus"
+brew "ctags"
+brew "fzf"
+brew "the_silver_searcher"
+brew "htop"
+brew "git"
+brew "tig"
+brew "ssh-copy-id"
+brew "tmux"
+brew "tree"
+brew "wget"
+
+###############################################################################
+# Cask GUI Applications                                                       #
+###############################################################################
+
+# Dev Tools
+cask "anaconda"
+cask "mongodb-compass"
+cask "ngrok"
+cask "postman"
+cask "psequel"
+cask "sequel-pro"
+
+# Browsers
+cask "google-chrome"
+cask "firefox"
+
+# QuickLook plugins
+cask "qlcolorcode"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "webpquicklook"
+
+# Notes
+cask "boostnote"
+cask "typora"
+cask "dropbox"
+cask "sketch"
+
+# Social Network
+cask "slack"
+cask "zoomus"
+
+# Others
+cask "soundflower"
+cask "spotify"
+cask "lyricsx"
+
+###############################################################################
+# MAS Applications                                                            #
+###############################################################################
+
+# Apple
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Xcode", id: 497799835
+
+# Other Purchased
+mas "Magnet", id: 441258766
+mas "LINE", id: 539883307
