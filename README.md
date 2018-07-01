@@ -14,3 +14,13 @@ sh utility.sh
 cd dotfiles
 sh bootstrap.sh
 ```
+
+## Using duti to script default applications for Macs
+
+```sh
+# Get Bundle ID
+osascript -e 'id of app "Typora"'
+
+# Set default applications
+duti macos/duti.settings
+```

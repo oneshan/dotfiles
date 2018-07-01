@@ -1,0 +1,22 @@
+# List of Uniform Type Identifiers in OS X: http://mths.be/utis
+# bundle id              UTI/ext/MIME type       role
+com.coteditor.CotEditor  public.plain-text       all
+com.coteditor.CotEditor  public.shell-script     all
+
+com.coteditor.CotEditor  .css                    all
+com.coteditor.CotEditor  .scss                   all
+com.coteditor.CotEditor  .xml                    all
+com.coteditor.CotEditor  .c                      all
+com.coteditor.CotEditor  .cpp                    all
+com.coteditor.CotEditor  .h                      all
+com.coteditor.CotEditor  .py                     all
+com.coteditor.CotEditor  .java                   all
+com.coteditor.CotEditor  .js                     all
+com.coteditor.CotEditor  .csv                    all
+com.coteditor.coteditor  .json                   all
+com.coteditor.coteditor  .sql                    all
+com.coteditor.CotEditor  .log                    all
+com.coteditor.CotEditor  .plist                  all
+
+abnerworks.Typora        .md                     all
+

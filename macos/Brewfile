@@ -12,8 +12,10 @@ tap "homebrew/bundle"
 # Cask dependencies
 brew "mas"
 
+brew "bash-completion"
 brew "cmus"
 brew "ctags"
+brew "duti"
 brew "fzf"
 brew "the_silver_searcher"
 brew "htop"
@@ -30,11 +32,12 @@ brew "wget"
 
 # Dev Tools
 cask "anaconda"
-cask "mongodb-compass"
+cask "CotEditor"
 cask "ngrok"
 cask "postman"
 cask "psequel"
 cask "sequel-pro"
+cask "mongodb-compass"
 
 # Browsers
 cask "google-chrome"
@@ -45,14 +48,14 @@ cask "qlcolorcode"
 cask "qlmarkdown"
 cask "qlstephen"
 cask "webpquicklook"
+cask "quicklook-json"
+cask "betterzip"
 
 # Notes
 cask "boostnote"
 cask "typora"
-cask "dropbox"
-cask "sketch"
 
-# Social Network
+# Communication
 cask "slack"
 cask "zoomus"
 
@@ -60,6 +63,8 @@ cask "zoomus"
 cask "soundflower"
 cask "spotify"
 cask "lyricsx"
+cask "dropbox"
+cask "sketch"
 
 ###############################################################################
 # MAS Applications                                                            #
@@ -74,3 +79,5 @@ mas "Xcode", id: 497799835
 # Other Purchased
 mas "Magnet", id: 441258766
 mas "LINE", id: 539883307
+mas "Quick Calendar", id: 1004514425
+mas "iTranslate", id: 884952790
