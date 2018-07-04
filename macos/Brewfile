@@ -65,6 +65,7 @@ cask "spotify"
 cask "lyricsx"
 cask "dropbox"
 cask "sketch"
+cask "mcbopomofo"  # TODO: open /usr/local/Caskroom/mcbopomofo/0.9.9/McBopomofoInstaller.app
 
 ###############################################################################
 # MAS Applications                                                            #

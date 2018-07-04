@@ -100,6 +100,8 @@ Plugin 'milkypostman/vim-togglelist.git'   " Bind a key to toggle the Location L
 Plugin 'Lokaltog/vim-easymotion'           " Easy motion (\w)
 Plugin 'gorodinskiy/vim-coloresque'        " Color preview for vim
 " Plugin 'ervandew/supertab'
+Plugin 'Shougo/vimshell.vim'               " Vim shell
+Plugin 'Shougo/vimproc.vim'
 
 " TextMate-style snippets
 Plugin 'MarcWeber/vim-addon-mw-utils'      " dependencies #1

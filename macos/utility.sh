@@ -246,7 +246,12 @@ defaults write com.apple.menuextra.clock IsAnalog -bool true
 ###############################################################################
 
 # Zhuyin input method: orientation horizontal
-defaults write com.apple.inputmethod.CoreChineseEngineFramework ZhuyinCandidateWindowDirection 0
+# defaults write com.apple.inputmethod.CoreChineseEngineFramework ZhuyinCandidateWindowDirection 0
+
+# Mcbopomofo input method: orientation horizontal
+defaults write org.openvanilla.inputmethod.McBopomofo UseHorizontalCandidateList true
+# Mcbopomofo input method: select candidate word using asdfghjk
+defaults write org.openvanilla.inputmethod.McBopomofo CandidateKeys asdfghjk
 
 ###############################################################################
 
