@@ -3,6 +3,12 @@
 # enable smart history search
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
+# history ignore specific commands
+export HISTIGNORE="ls:ll:cd:pwd:clear:tig"
+# history ignore commands starting with spaces & duplicates
+export HISTCONTROL=ignoreboth:erasedups
+# history with colorful date
+export HISTTIMEFORMAT="[$(tput setaf 6)%F %T$(tput sgr0)] "
 
 # enable programmable completion features
 if ! shopt -oq posix; then
