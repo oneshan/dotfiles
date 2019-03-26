@@ -38,6 +38,7 @@ cask "postman"
 cask "psequel"
 cask "sequel-pro"
 cask "mongodb-compass"
+cask "npm"
 
 # Browsers
 cask "google-chrome"
@@ -49,7 +50,6 @@ cask "qlmarkdown"
 cask "qlstephen"
 cask "webpquicklook"
 cask "quicklook-json"
-cask "betterzip"
 
 # Notes
 cask "boostnote"
