@@ -17,11 +17,11 @@ brew "cmus"
 brew "ctags"
 brew "duti"
 brew "fzf"
-brew "the_silver_searcher"
-brew "htop"
 brew "git"
-brew "tig"
+brew "htop"
 brew "ssh-copy-id"
+brew "the_silver_searcher"
+brew "tig"
 brew "tmux"
 brew "tree"
 brew "wget"
@@ -60,9 +60,7 @@ cask "slack"
 cask "zoomus"
 
 # Others
-cask "soundflower"
 cask "spotify"
-cask "lyricsx"
 cask "dropbox"
 cask "sketch"
 cask "mcbopomofo"  # TODO: open /usr/local/Caskroom/mcbopomofo/0.9.9/McBopomofoInstaller.app
@@ -78,7 +76,8 @@ mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
 
 # Other Purchased
-mas "Magnet", id: 441258766
+mas "ForkLift", id: 412448059
 mas "LINE", id: 539883307
+mas "Magnet", id: 441258766
 mas "Quick Calendar", id: 1004514425
 mas "iTranslate", id: 884952790

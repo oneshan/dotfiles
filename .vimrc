@@ -93,24 +93,19 @@ Plugin 'VundleVim/Vundle.vim'              " Let Vundle manage Vundle, required
 Plugin 'scrooloose/nerdtree'               " A Tree explorer plugin for navigating the filesystem
 Plugin 'majutsushi/tagbar'                 " List table of function/variable like IDE
 Plugin 'junegunn/fzf.vim'                  " Fuzzy Finder (brew install fzf)
+Plugin 'alok/notational-fzf-vim'
 
 " Tool
 Plugin 'itchyny/lightline.vim'             " A statusline plugin for vim
 Plugin 'milkypostman/vim-togglelist.git'   " Bind a key to toggle the Location List (\l) and the Quickfix List (\q)
 Plugin 'Lokaltog/vim-easymotion'           " Easy motion (\w)
 Plugin 'gorodinskiy/vim-coloresque'        " Color preview for vim
-" Plugin 'ervandew/supertab'
-Plugin 'Shougo/vimshell.vim'               " Vim shell
-Plugin 'Shougo/vimproc.vim'
-
-" TextMate-style snippets
-Plugin 'MarcWeber/vim-addon-mw-utils'      " dependencies #1
-Plugin 'tomtom/tlib_vim'                   " dependencies #2
-Plugin 'honza/vim-snippets'                " Snippets repo
-Plugin 'SirVer/ultisnips'                  " Snippets manager
+Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 
 " Develop
-Plugin 'vim-syntastic/syntastic'           " A syntax checking plugin for Vim
+Plugin 'honza/vim-snippets'                " Snippets repo
+Plugin 'SirVer/ultisnips'                  " Snippets manager
+Plugin 'w0rp/ale'                          " Check syntax in Vim asynchronously and fix files
 Plugin 'maralla/completor.vim'             " Auto Complete Code
 Plugin 'cjrh/vim-conda'                    " Change conda environments in the Vim editor
 Plugin 'mattn/emmet-vim'                   " Zen coding (html, css)
@@ -134,19 +129,23 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 " EasyMotion
 let g:EasyMotion_leader_key = '\'
 
-" syntastic
+" Ale
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['pylint']
-"let g:syntastic_python_pylint_args = "--load-plugins pylint_django --ignore=E402 --max-line-length=120 --disable=missing-docstring"
-"let g:syntastic_python_checkers = ['flake8']
-"let g:syntastic_python_flake8_args="--ignore=E402 --max-line-length=120"
+let g:ale_open_list = 1
+let g:ale_python_pylint_options = '--load-plugins pylint_django --ignore=E402 --max-line-length=120 --disable=missing-docstring'
+let g:ale_linters = {
+\   'go': ['vet', 'errcheck'],
+\   'python': ['pylint'],
+\   'javascript': ['prettier', 'eslint']
+\}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['autopep8','yapf'],
+\   'javascript': ['eslint'],
+\}
 
 " completor 
 let g:completor_auto_trigger = 0
@@ -156,6 +155,7 @@ inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<C
 let g:UltiSnipsExpandTrigger = "<C-j>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom_snippets"]
 
 " emmet.vim
 let g:user_emmet_install_global = 0
@@ -193,6 +193,15 @@ highlight clear SignColumn
 let g:jedi#use_tabs_not_buffers = 1    " use tabs when going to a definition etc
 let g:jedi#completions_enabled = 0
 
+" instant_markdown
+let g:instant_markdown_autostart = 0
+
+" notational-fzf-vim
+let g:nv_search_paths = ['~/Dropbox/oneshan/notes/']
+let g:nv_use_short_pathnames = 1
+let g:nv_create_note_window = 'tabedit'
+let g:nv_ignore_pattern = ['.git*']
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -201,15 +210,12 @@ map <F3> :NERDTreeToggle<CR>
 map <F4> :TagbarToggle<CR>
 map <F5> :CondaChangeEnv<CR>
 
-noremap <C-w>e :SyntasticCheck<CR>
-noremap <C-w>f :SyntasticReset<CR>
 nnoremap <leader>, :GFiles<cr>
 nnoremap <leader>. :Tags<cr>
 
 nmap <silent> [g :<C-U> :GitGutterLineHighlightsToggle<CR>
 nmap <silent> [h :<C-U> :lprev<CR>
 nmap <silent> ]h :<C-U> :lnext<CR>
-
 nmap <script> <silent> <leader>l :call ToggleLocationList()<CR>
 nmap <script> <silent> <leader>q :call ToggleQuickfixList()<CR>
 
@@ -221,3 +227,4 @@ map g5 :tabn 5<CR>
 map gc :tabnew<CR>
 map gn :tabn<CR>
 map gp :tabp<CR>
+map gm :NV<CR>
