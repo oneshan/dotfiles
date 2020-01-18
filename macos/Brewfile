@@ -25,6 +25,7 @@ brew "tig"
 brew "tmux"
 brew "tree"
 brew "wget"
+brew "rg"
 
 ###############################################################################
 # Cask GUI Applications                                                       #
@@ -38,7 +39,6 @@ cask "postman"
 cask "psequel"
 cask "sequel-pro"
 cask "mongodb-compass"
-cask "npm"
 
 # Browsers
 cask "google-chrome"
@@ -63,7 +63,7 @@ cask "zoomus"
 cask "spotify"
 cask "dropbox"
 cask "sketch"
-cask "mcbopomofo"  # TODO: open /usr/local/Caskroom/mcbopomofo/0.9.9/McBopomofoInstaller.app
+cask "mcbopomofo"  # TODO: open /usr/local/Caskroom/mcbopomofo/0.9.11/McBopomofoInstaller.app
 
 ###############################################################################
 # MAS Applications                                                            #
@@ -76,8 +76,6 @@ mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
 
 # Other Purchased
-mas "ForkLift", id: 412448059
 mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
 mas "Quick Calendar", id: 1004514425
-mas "iTranslate", id: 884952790

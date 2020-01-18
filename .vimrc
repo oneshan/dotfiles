@@ -104,7 +104,6 @@ Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 
 " Develop
 Plugin 'honza/vim-snippets'                " Snippets repo
-Plugin 'SirVer/ultisnips'                  " Snippets manager
 Plugin 'w0rp/ale'                          " Check syntax in Vim asynchronously and fix files
 Plugin 'maralla/completor.vim'             " Auto Complete Code
 Plugin 'cjrh/vim-conda'                    " Change conda environments in the Vim editor
@@ -150,12 +149,6 @@ let g:ale_fixers = {
 " completor 
 let g:completor_auto_trigger = 0
 inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
-
-" UltiSnips
-let g:UltiSnipsExpandTrigger = "<C-j>"
-let g:UltiSnipsJumpForwardTrigger = "<C-j>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom_snippets"]
 
 " emmet.vim
 let g:user_emmet_install_global = 0
