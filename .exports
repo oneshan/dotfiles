@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Larger bash history (allow 32³ entries; default is 500)
-export CLICOLOR=1
-export LSCOLORS=gxfxcxdxbxGxDxabagacad
-
 # Make some commands not show up in history
 export HISTIGNORE=" *:ls:cd:cd -:pwd:exit:date:* --help:* -h:pony:pony add *:pony update *:pony save *:pony ls:pony ls *";
 

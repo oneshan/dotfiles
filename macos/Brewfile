@@ -12,7 +12,6 @@ tap "homebrew/bundle"
 # Cask dependencies
 brew "mas"
 
-brew "bash-completion"
 brew "cmus"
 brew "ctags"
 brew "duti"
@@ -32,7 +31,6 @@ brew "rg"
 ###############################################################################
 
 # Dev Tools
-cask "anaconda"
 cask "CotEditor"
 cask "ngrok"
 cask "postman"

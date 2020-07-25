@@ -106,7 +106,6 @@ Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 Plugin 'honza/vim-snippets'                " Snippets repo
 Plugin 'w0rp/ale'                          " Check syntax in Vim asynchronously and fix files
 Plugin 'maralla/completor.vim'             " Auto Complete Code
-Plugin 'cjrh/vim-conda'                    " Change conda environments in the Vim editor
 Plugin 'mattn/emmet-vim'                   " Zen coding (html, css)
 Plugin 'davidhalter/jedi-vim'              " Python
 
@@ -159,20 +158,15 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'condaenv'],
       \              [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
-      \   'condaenv': 'LightlineConda',
      \ },
       \ }
 function! LightlineConda()
   return ($CONDA_DEFAULT_ENV != '') ? $CONDA_DEFAULT_ENV : 'none'
 endfunction
-
-" vim-conda
-let g:conda_startup_msg_suppress = 0
 
 " GitGutter
 let g:gitgutter_highlight_lines = 1

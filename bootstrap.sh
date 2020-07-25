@@ -9,7 +9,12 @@ rsync --exclude ".git/" \
   --exclude "bootstrap.sh" \
   --exclude "README.md" \
   -avh --no-perms . ~;
-source ~/.bash_profile;
+
+# Install oh-my-zsh and plugins
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+exec $SHELL
 
 # Install vim plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
