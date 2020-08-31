@@ -36,7 +36,9 @@ cask "ngrok"
 cask "postman"
 cask "psequel"
 cask "sequel-pro"
-cask "mongodb-compass"
+cask "robo-3t"
+cask "docker"
+cask "tunnelblick"
 
 # Browsers
 cask "google-chrome"
@@ -44,13 +46,11 @@ cask "firefox"
 
 # QuickLook plugins
 cask "qlcolorcode"
-cask "qlmarkdown"
 cask "qlstephen"
 cask "webpquicklook"
 cask "quicklook-json"
 
 # Notes
-cask "boostnote"
 cask "typora"
 
 # Communication
@@ -74,6 +74,6 @@ mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
 
 # Other Purchased
-mas "LINE", id: 539883307
+# mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
 mas "Quick Calendar", id: 1004514425

@@ -1,5 +1,6 @@
 # Improve bash
 alias ll='ls -FGlAhp'
+alias ls='ls -GA'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
@@ -20,6 +21,8 @@ alias gcm='git commit -m'
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias lanip="ifconfig | grep 'inet' | grep -v 127.0.0.1"
 alias sniff='nettop -m route'
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
 # Quicklook preview files from the command line
 alias ql="qlmanage -p &>/dev/null"
+
