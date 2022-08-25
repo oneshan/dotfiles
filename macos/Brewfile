@@ -12,33 +12,41 @@ tap "homebrew/bundle"
 # Cask dependencies
 brew "mas"
 
+brew "awscli"
 brew "cmus"
 brew "ctags"
 brew "duti"
 brew "fzf"
-brew "git"
+brew "gh"
 brew "htop"
+brew "rg"
 brew "ssh-copy-id"
 brew "the_silver_searcher"
 brew "tig"
 brew "tmux"
 brew "tree"
 brew "wget"
-brew "rg"
 
 ###############################################################################
 # Cask GUI Applications                                                       #
 ###############################################################################
 
+# Password Manager & Authenticator
+cask "bitwarden"
+cask "authy"
+
 # Dev Tools
 cask "CotEditor"
+cask "visual-studio-code"
 cask "ngrok"
 cask "postman"
+cask "docker"
+cask "tunnelblick"
+
+# DB
 cask "psequel"
 cask "sequel-pro"
 cask "robo-3t"
-cask "docker"
-cask "tunnelblick"
 
 # Browsers
 cask "google-chrome"
@@ -50,18 +58,21 @@ cask "qlstephen"
 cask "webpquicklook"
 cask "quicklook-json"
 
-# Notes
-cask "typora"
-
 # Communication
 cask "slack"
 cask "zoomus"
 
+# Input Method
+cask "google-japanese-ime"
+# TODO: open /opt/homebrew/Caskroom/google-japanese-ime/latest/GoogleJapaneseInput.pkg
+cask "mcbopomofo"
+# TODO: open /opt/homebrew/Caskroom/mcbopomofo/2.4/McBopomofoInstaller.app
+
 # Others
+cask "obsidian"
 cask "spotify"
 cask "dropbox"
 cask "sketch"
-cask "mcbopomofo"  # TODO: open /usr/local/Caskroom/mcbopomofo/0.9.11/McBopomofoInstaller.app
 
 ###############################################################################
 # MAS Applications                                                            #
@@ -74,6 +85,6 @@ mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
 
 # Other Purchased
-# mas "LINE", id: 539883307
+mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
 mas "Quick Calendar", id: 1004514425

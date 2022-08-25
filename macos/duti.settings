@@ -17,6 +17,3 @@ com.coteditor.coteditor  .json                   all
 com.coteditor.coteditor  .sql                    all
 com.coteditor.CotEditor  .log                    all
 com.coteditor.CotEditor  .plist                  all
-
-abnerworks.Typora        .md                     all
-

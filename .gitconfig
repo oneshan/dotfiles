@@ -3,6 +3,5 @@
     email = oneshan.liao@gmail.com
 
 [apply]
-
     # Detect whitespace errors when applying a patch
     whitespace = fix

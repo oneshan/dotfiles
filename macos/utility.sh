@@ -28,9 +28,6 @@ sudo nvram SystemAudioVolume=" "
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
-# Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
-
 # Shows ethernet connected computers in airdrop
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
@@ -46,6 +43,7 @@ defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 ###############################################################################
 
 # Enable tap to click for this user and for the login screen
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
@@ -55,7 +53,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
 
 ###############################################################################
-# Screen                                                                      #
+# Screenshots                                                                 #
 ###############################################################################
 
 # Save screenshots to the Pictures folder
@@ -91,6 +89,9 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Automatically remove items from the Trash after 30 days
+defaults write com.apple.finder FXRemoveOldTrashItems -bool true
 
 # Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -144,8 +145,8 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Don't animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 
-# Don't automatically rearrange Spaces based on most recent use
-defaults write com.apple.dock mru-spaces -bool false
+# Don't show recent apps
+defaults write com.apple.dock show-recents -bool false
 
 ###############################################################################
 # Terminal                                                                    #
@@ -159,7 +160,7 @@ defaults write com.apple.terminal StringEncodings -array 4
 defaults write com.apple.terminal SecureKeyboardEntry -bool true
 
 # Disable the annoying line marks
-defaults write com.apple.Terminal ShowLineMarks -int 0
+defaults write com.apple.terminal ShowLineMarks -int 0
 
 ###############################################################################
 # Time Machine                                                                #
@@ -227,32 +228,23 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # Menubar                                                                     #
 ###############################################################################
 
-# Show Battery, Bluetooth, Volume
-defaults write com.apple.systemuiserver menuExtras -array \
-  "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-  "/System/Library/CoreServices/Menu Extras/Battery.menu" \
-  "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-  "/System/Library/CoreServices/Menu Extras/Clock.menu" \
-  "/System/Library/CoreServices/Menu Extras/Volume.menu"
-
-# Show battery percentage
-defaults write com.apple.menuextra.battery ShowPercent -string "YES"
-
-# Analog menu bar clock
-defaults write com.apple.menuextra.clock IsAnalog -bool true
+# Set menubar digital clock format
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM HH:mm:ss"
 
 ###############################################################################
-# Others                                                                      #
+# Input Method                                                                #
 ###############################################################################
 
 # Zhuyin input method: orientation horizontal
 # defaults write com.apple.inputmethod.CoreChineseEngineFramework ZhuyinCandidateWindowDirection 0
 
 # Mcbopomofo input method: orientation horizontal
-# defaults write org.openvanilla.inputmethod.McBopomofo UseHorizontalCandidateList true
+defaults write org.openvanilla.inputmethod.McBopomofo UseHorizontalCandidateList true
 # Mcbopomofo input method: select candidate word using asdfghjk
-# defaults write org.openvanilla.inputmethod.McBopomofo CandidateKeys asdfghjk
+defaults write org.openvanilla.inputmethod.McBopomofo CandidateKeys asdfghjk
 
 ###############################################################################
 
 echo "Done. logout/restart to take effect."
+killall SystemUIServer
+

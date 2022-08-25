@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+cd $(dirname "$0")
 
 # Install Homebrew if not installed
 if ! hash brew 2>/dev/null; then
@@ -19,4 +20,3 @@ brew bundle --file=Brewfile
 
 # Remove outdated versions from the cellar
 brew cleanup && brew prune
-brew cask cleanup

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Homebrew
+export PATH=/opt/homebrew/bin:$PATH
+
 # Make some commands not show up in history
 export HISTIGNORE=" *:ls:cd:cd -:pwd:exit:date:* --help:* -h:pony:pony add *:pony update *:pony save *:pony ls:pony ls *";
 
