@@ -42,3 +42,12 @@ System Preferences > Security & Privacy > Accessibility
 ### AWS Cli
 
 - `aws configure`
+
+### Node.js (optional)
+
+```sh
+brew install nvm
+
+# Install the current LTS Node.js version
+nvm install --lts
+```

@@ -19,4 +19,4 @@ sudo -v
 brew bundle --file=Brewfile
 
 # Remove outdated versions from the cellar
-brew cleanup && brew prune
+brew cleanup

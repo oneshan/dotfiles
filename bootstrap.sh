@@ -29,6 +29,8 @@ fi
 
 # Install vim plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# for python linting.
+pip install flake8 pylint pylint_django jedi
 vim +BundleInstall +qall
 
 # Refresh the terminal with updated shell

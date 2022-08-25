@@ -57,7 +57,7 @@ set tags=./tags;,tags;
 
 " fzf
 if executable('fzf')
-    set rtp+=/usr/local/opt/fzf
+    set rtp+=/opt/homebrew/bin/fzf
 endif
 
 " ag
@@ -92,6 +92,7 @@ Plugin 'VundleVim/Vundle.vim'              " Let Vundle manage Vundle, required
 " Code/Project navigation
 Plugin 'scrooloose/nerdtree'               " A Tree explorer plugin for navigating the filesystem
 Plugin 'majutsushi/tagbar'                 " List table of function/variable like IDE
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'                  " Fuzzy Finder (brew install fzf)
 Plugin 'alok/notational-fzf-vim'
 
@@ -100,7 +101,6 @@ Plugin 'itchyny/lightline.vim'             " A statusline plugin for vim
 Plugin 'milkypostman/vim-togglelist.git'   " Bind a key to toggle the Location List (\l) and the Quickfix List (\q)
 Plugin 'Lokaltog/vim-easymotion'           " Easy motion (\w)
 Plugin 'gorodinskiy/vim-coloresque'        " Color preview for vim
-Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 
 " Develop
 Plugin 'honza/vim-snippets'                " Snippets repo
@@ -146,6 +146,7 @@ let g:ale_fixers = {
 \}
 
 " completor 
+let g:completor_python_binary = '/opt/homebrew/bin/python3'
 let g:completor_auto_trigger = 0
 inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
 
@@ -179,9 +180,6 @@ highlight clear SignColumn
 " jedi
 let g:jedi#use_tabs_not_buffers = 1    " use tabs when going to a definition etc
 let g:jedi#completions_enabled = 0
-
-" instant_markdown
-let g:instant_markdown_autostart = 0
 
 " notational-fzf-vim
 let g:nv_search_paths = ['~/Dropbox/oneshan/notes/']

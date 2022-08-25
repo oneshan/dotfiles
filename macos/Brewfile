@@ -25,6 +25,7 @@ brew "the_silver_searcher"
 brew "tig"
 brew "tmux"
 brew "tree"
+brew "vim"
 brew "wget"
 
 ###############################################################################
@@ -41,10 +42,8 @@ cask "visual-studio-code"
 cask "ngrok"
 cask "postman"
 cask "docker"
-cask "tunnelblick"
 
 # DB
-cask "psequel"
 cask "sequel-pro"
 cask "robo-3t"
 
@@ -57,10 +56,6 @@ cask "qlcolorcode"
 cask "qlstephen"
 cask "webpquicklook"
 cask "quicklook-json"
-
-# Communication
-cask "slack"
-cask "zoomus"
 
 # Input Method
 cask "google-japanese-ime"
@@ -78,13 +73,6 @@ cask "sketch"
 # MAS Applications                                                            #
 ###############################################################################
 
-# Apple
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Xcode", id: 497799835
-
-# Other Purchased
 mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
 mas "Quick Calendar", id: 1004514425
