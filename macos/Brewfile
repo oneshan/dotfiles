@@ -51,12 +51,6 @@ cask "robo-3t"
 cask "google-chrome"
 cask "firefox"
 
-# QuickLook plugins
-cask "qlcolorcode"
-cask "qlstephen"
-cask "webpquicklook"
-cask "quicklook-json"
-
 # Input Method
 cask "google-japanese-ime"
 # TODO: open /opt/homebrew/Caskroom/google-japanese-ime/latest/GoogleJapaneseInput.pkg
