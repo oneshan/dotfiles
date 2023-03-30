@@ -13,7 +13,6 @@ tap "homebrew/bundle"
 brew "mas"
 
 brew "awscli"
-brew "cmus"
 brew "ctags"
 brew "duti"
 brew "fzf"
@@ -45,7 +44,7 @@ cask "docker"
 
 # DB
 cask "sequel-pro"
-cask "robo-3t"
+cask "studio-3t"
 
 # Browsers
 cask "google-chrome"
@@ -53,15 +52,16 @@ cask "firefox"
 
 # Input Method
 cask "google-japanese-ime"
-# TODO: open /opt/homebrew/Caskroom/google-japanese-ime/latest/GoogleJapaneseInput.pkg
+# TODO: open /usr/local/Caskroom/google-japanese-ime/latest/GoogleJapaneseInput.pkg
 cask "mcbopomofo"
-# TODO: open /opt/homebrew/Caskroom/mcbopomofo/2.4/McBopomofoInstaller.app
+# TODO: open /usr/local/Caskroom/mcbopomofo/2.5/McBopomofoInstaller.app
 
 # Others
 cask "obsidian"
 cask "spotify"
 cask "dropbox"
-cask "sketch"
+cask "zoom"
+cask "slack"
 
 ###############################################################################
 # MAS Applications                                                            #
@@ -69,4 +69,3 @@ cask "sketch"
 
 mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
-mas "Quick Calendar", id: 1004514425

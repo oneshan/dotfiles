@@ -3,8 +3,12 @@ cd $(dirname "$0")
 
 # Install Homebrew if not installed
 if ! hash brew 2>/dev/null; then
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
+
+# Run these two commands in your terminal to add Homebrew to your PATH
+(echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/oneshan/.zprofile
+eval "$(/usr/local/bin/brew shellenv)"
 
 # Make sure we are using the latest Homebrew
 brew update
