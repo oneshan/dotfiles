@@ -27,6 +27,10 @@ brew "tree"
 brew "vim"
 brew "wget"
 
+brew "java"
+brew "node"
+brew "corepack"
+
 ###############################################################################
 # Cask GUI Applications                                                       #
 ###############################################################################
@@ -45,6 +49,7 @@ cask "docker"
 # DB
 cask "sequel-pro"
 cask "studio-3t"
+cask "tableplus"
 
 # Browsers
 cask "google-chrome"
@@ -52,9 +57,7 @@ cask "firefox"
 
 # Input Method
 cask "google-japanese-ime"
-# TODO: open /usr/local/Caskroom/google-japanese-ime/latest/GoogleJapaneseInput.pkg
 cask "mcbopomofo"
-# TODO: open /usr/local/Caskroom/mcbopomofo/2.5/McBopomofoInstaller.app
 
 # Others
 cask "obsidian"

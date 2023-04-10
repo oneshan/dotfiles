@@ -7,8 +7,8 @@ if ! hash brew 2>/dev/null; then
 fi
 
 # Run these two commands in your terminal to add Homebrew to your PATH
-(echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/oneshan/.zprofile
-eval "$(/usr/local/bin/brew shellenv)"
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/oneshan/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Make sure we are using the latest Homebrew
 brew update
