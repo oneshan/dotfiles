@@ -23,11 +23,18 @@ duti macos/duti.settings
 ## Other manual settings
 
 ### Install input methods
+
+On Apple Silicon
 ```sh
 # cask "google-japanese-ime"
 open /opt/homebrew/Caskroom/google-japanese-ime/latest/GoogleJapaneseInput.pkg
 # cask "mcbopomofo"
-open /opt/homebrew/Caskroom/mcbopomofo/2.4/McBopomofoInstaller.app
+open /opt/homebrew/Caskroom/mcbopomofo/2.5/McBopomofoInstaller.app
+```
+
+To find where exactly a formula has been installed
+```
+brew info --cask <formula>
 ```
 
 ### Turn on Magnet & Dropbox

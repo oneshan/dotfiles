@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Homebrew
-export PATH=/opt/homebrew/bin:$PATH
-
 # Make some commands not show up in history
 export HISTIGNORE=" *:ls:cd:cd -:pwd:exit:date:* --help:* -h:pony:pony add *:pony update *:pony save *:pony ls:pony ls *";
 
@@ -13,10 +10,20 @@ export LC_ALL="en_US.UTF-8";
 # Don't clear the screen after quitting a manual page
 export MANPAGER="less -X";
 
-# Update cdpath
+# Update path
 export CDPATH=${CDPATH}:${HOME}/Shortcuts
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# Golang
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+
+# Curl
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/curl/lib"
+export CPPFLAGS="-I/usr/local/opt/curl/include"
+export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
+
+# OpenJdk
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
